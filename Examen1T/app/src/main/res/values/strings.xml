@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Examen1T</string>
+    <string name="contar">Contar</string>
+    <string name="enviar">Enviar</string>
+    <string name="registrar">Registrar</string>
+    <string name="insertar_empleado">Insertar Empleado</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido1">Primer Apellido</string>
+    <string name="apellido2">Segundo Apellido</string>
+    <string name="empty_user">Debe introducir un email válido</string>
+    <string name="empty_password">Debe introducir una contraseña</string>
+    <string name="invalid_password">Su contraseña debe tener más de 8 caracteres</string>
+    <string name="hidePassword">Ocultar contraseña</string>
+    <string name="showPassword">Ver contraseña</string>
+    <string name="no_incremento">Debe definir un incremento numeral para el contador</string>
+    <string name="no_match_password">La contraseña no coincide</string>
+    <string name="registro_correcto">Se ha registrado al usuario</string>
+</resources>

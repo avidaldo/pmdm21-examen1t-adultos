@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    tools:context=".ContadorActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contador 1"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@id/tvCuenta1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et1"
+        style="@style/cuenta"
+        android:text="1"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <TextView
+        android:id="@+id/tvCuenta1"
+        style="@style/cuenta"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/ivReset1"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toTopOf="@+id/button1" />
+
+    <ImageView
+        android:id="@+id/ivReset1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCuenta1"
+        app:layout_constraintTop_toTopOf="@+id/button1"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/tvIncremento1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incremento:"
+        app:layout_constraintBottom_toBottomOf="@+id/et1"
+        app:layout_constraintEnd_toStartOf="@+id/et1"
+        app:layout_constraintTop_toTopOf="@+id/et1" />
+
+
+
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contador 2"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/tvCuentaGlobal"
+        app:layout_constraintEnd_toStartOf="@id/tvCuenta2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <EditText
+        android:id="@+id/et2"
+        style="@style/cuenta"
+        android:text="1"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/tvCuenta2"
+        style="@style/cuenta"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/ivReset2"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <ImageView
+        android:id="@+id/ivReset2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCuenta2"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/tvIncremento2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incremento:"
+        app:layout_constraintBottom_toBottomOf="@+id/et2"
+        app:layout_constraintEnd_toStartOf="@+id/et2"
+        app:layout_constraintTop_toTopOf="@+id/et2" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Global"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCuentaGlobal"
+        app:layout_constraintEnd_toStartOf="@+id/tvCuentaGlobal"
+        app:layout_constraintTop_toTopOf="@+id/tvCuentaGlobal" />
+
+    <TextView
+        android:id="@+id/tvCuentaGlobal"
+        style="@style/cuenta"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <ImageView
+        android:id="@+id/ivResetG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCuentaGlobal"
+        app:layout_constraintStart_toEndOf="@+id/tvCuentaGlobal"
+        app:layout_constraintTop_toTopOf="@+id/tvCuentaGlobal"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
