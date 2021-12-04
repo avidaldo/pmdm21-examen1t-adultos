@@ -34,18 +34,6 @@
         app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
-    <EditText
-        android:id="@+id/editTextPassMostrado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:visibility="invisible"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/tvMuestraContrasena"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
     <TextView
         android:id="@+id/tvMuestraContrasena"
         android:layout_width="wrap_content"

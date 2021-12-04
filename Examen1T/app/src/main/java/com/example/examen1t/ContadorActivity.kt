@@ -12,9 +12,16 @@ class ContadorActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityContadorBinding
 
-    var cuenta1 = 0
-    var cuenta2 = 0
-    var cuentaG = 0
+
+    /* Utilizamos los setters de las propiedades para actualizar automáticamente la UI */
+
+    private var cuenta1 = 0
+        set(value) { field=value; binding.tvCuenta1.text = field.toString() }
+    private var cuenta2 = 0
+        set(value) {  field=value; binding.tvCuenta2.text = field.toString() }
+    private var cuentaG = 0
+        set(value) { field=value;  binding.tvCuentaGlobal.text = field.toString() }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +31,9 @@ class ContadorActivity : AppCompatActivity() {
         binding.button1.setOnClickListener {
             try {
                 val incremento = binding.et1.text.toString().toInt()
-                alerta(binding.tvIncremento1, false)
                 cuenta1 += incremento
                 cuentaG += incremento
-                updateDisplay()
+                alerta(binding.tvIncremento1, false)
             } catch (e: NumberFormatException) {  // Si el EditText de incremento no tiene un número
                 alerta(binding.tvIncremento1, true)
                 Toast.makeText(this, R.string.no_incremento, Toast.LENGTH_SHORT).show()
@@ -37,43 +43,24 @@ class ContadorActivity : AppCompatActivity() {
         binding.button2.setOnClickListener {
             try {
                 val incremento = binding.et2.text.toString().toInt()
-                alerta(binding.tvIncremento2, false)
                 cuenta2 += incremento
                 cuentaG += incremento
-                updateDisplay()
+                alerta(binding.tvIncremento2, false)
             } catch (e: NumberFormatException) {
                 alerta(binding.tvIncremento2, true)
                 Toast.makeText(this, R.string.no_incremento, Toast.LENGTH_SHORT).show()
             }
         }
 
-        binding.ivReset1.setOnClickListener {
-            cuenta1 = 0
-            updateDisplay()
-        }
-
-        binding.ivReset2.setOnClickListener {
-            cuenta2 = 0
-            updateDisplay()
-        }
-
-        binding.ivResetG.setOnClickListener {
-            cuentaG = 0
-            updateDisplay()
-        }
+        binding.ivReset1.setOnClickListener { cuenta1 = 0 }
+        binding.ivReset2.setOnClickListener { cuenta2 = 0 }
+        binding.ivResetG.setOnClickListener { cuentaG = 0 }
 
     }
 
     private fun alerta(tv: TextView, alerta: Boolean) {
         if (alerta) tv.setTextColor(Color.RED)
         else tv.setTextColor(Color.BLACK)
-    }
-
-
-    private fun updateDisplay() {
-        binding.tvCuenta1.text = cuenta1.toString()
-        binding.tvCuenta2.text = cuenta2.toString()
-        binding.tvCuentaGlobal.text = cuentaG.toString()
     }
 
 }
